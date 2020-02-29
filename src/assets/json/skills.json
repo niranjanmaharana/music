@@ -1,0 +1,39 @@
+{
+    "status": "Successfull",
+    "data": [{
+        "name": "Java",
+        "pctl": 60,
+        "desc": "Java",
+        "colorCd": "lightsalmon"
+    }, {
+        "name": "Spring",
+        "pctl": 70,
+        "desc": "Spring Framework",
+        "colorCd": "lightcoral"
+    }, {
+        "name": "Hibernate",
+        "pctl": 40,
+        "desc": "Hibernate Framework",
+        "colorCd": "indianred"
+    }, {
+        "name": "ExtJS",
+        "pctl": 40,
+        "desc": "Sencha Extensible JS Framework",
+        "colorCd": "orange"
+    }, {
+        "name": "Angular",
+        "pctl": 60,
+        "desc": "Angular: JavaScript Framework",
+        "colorCd": "darkorange"
+    }, {
+        "name": "jQuery/JavaScript",
+        "pctl": 70,
+        "desc": "jQuery/JavaScript",
+        "colorCd": "orangered"
+    }, {
+        "name": "HTML/CSS",
+        "pctl": 80,
+        "desc": "HTML/CSS",
+        "colorCd": "tomato"
+    }]
+}

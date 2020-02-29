@@ -1,0 +1,93 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+.ui-btn:hover {
+    text-decoration: none;
+}
+
+.btn-contact {
+    border-radius: 0;
+    display: inline-block;
+    padding: 13.5px 45px;
+    background-color: $base-background;
+    font-size: $button-font-size;
+    color: $base-color-hover;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+}
+
+.btn-contact:hover {
+    color: $base-background;
+    background: transparent;
+    box-shadow: 0 15px 20px $btn-box-shadow;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 12.5px 45px;
+    font-size: $button-font-size;
+    font-weight: 500;
+    -webkit-transition: .5s;
+    transition: .5s;
+    text-transform: capitalize;
+    color: $base-color-hover;
+    border: 1px solid $base-color-hover;
+}
+
+.btn-more:hover {
+    background-color: $base-background;
+    color: $base-black;
+}
+
+.learn-btn {
+    display: inline-block;
+    text-transform: capitalize;
+    margin-top: 20px;
+    color: $base-color-hover;
+}
+
+.learn-btn:hover {
+    color: $base-color-hover;
+}
+
+.btn-submit {
+    display: inline-block;
+    font-size: $button-font-size;
+    color: $base-background;
+    text-transform: capitalize;
+    -webkit-transition: .5s;
+    transition: .5s;
+    padding: 14.5px 43px;
+    background-color: $base-color-hover;
+    border: 2px solid $base-color-hover;
+}
+
+.btn-submit:hover {
+    color: $base-color-hover !important;
+    background-color: transparent;
+}
+
+.btn-download {
+    display: inline-block;
+    font-size: $button-font-size;
+    color: $white;
+    text-transform: capitalize;
+    -webkit-transition: .5s;
+    transition: .5s;
+    padding: 14.5px 43px;
+    background-color: $banner-text;
+    border: 2px solid $banner-text;
+}
+
+.btn-download:hover {
+    color: $banner-text !important;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .btn-more {
+        padding: 9.5px 28px;
+    }
+}

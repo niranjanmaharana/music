@@ -1,1 +1,10 @@
-/*app.component.scss*/
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1280px) {
+    .wrap {
+        width: 90%;
+    }
+}
