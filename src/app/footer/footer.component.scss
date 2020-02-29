@@ -1,0 +1,42 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+.footer {
+    border-top: 2px solid $theme-background;
+    min-height: 100px;
+    background-color: $footer-background;
+    .footer-content {
+        width: 80%;
+        margin: auto;
+        padding: 20px 0px;
+        .footer-title {
+            font-size: 14px;
+        }
+        ul {
+            li {
+                a {
+                    color: $footer-text-color;
+                    font: 12px/27px Arial, Helvetica, sans-serif;
+                    -moz-transition: background 0.5s ease;
+                    -o-transition: background 0.5s ease;
+                    -webkit-transition: background 0.5s ease;
+                }
+                a:hover {
+                    color: $theme-background;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .credit {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        font-weight: normal;
+        a {
+            color: $white;
+        }
+        i {
+            color: $theme-background;
+        }
+    }
+}

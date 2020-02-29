@@ -1,5 +1,4 @@
 <section class="header">
-
     <!-- <div class="top-header">
         <div class="container">
             <div class="row">
@@ -35,4 +34,53 @@
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light navigation">
+        <a class="navbar-brand navbar-toggler" [ngClass]="{'show': expandNavbar}" href="index.html">
+            <span>Musix</span>
+        </a>
+        <button class="navbar-toggler toggler" type="button" (click)="expandNavbar = !expandNavbar">
+            <span class="menu-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse menu-item" [ngClass]="{'show': expandNavbar}">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="flash-slider">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol> -->
+            <!-- Wrapper for slides -->
+            <!-- <div class="carousel-inner"> -->
+            <div class="item active">
+                <img src="../../assets/images/banners/la.jpg" alt="Los Angeles" style="width:100%;">
+            </div>
+            <!-- <div class="item">
+                    <img src="../../assets/images/banners/chicago.jpg" alt="Chicago" style="width:100%;">
+                </div>
+                <div class="item">
+                    <img src="../../assets/images/banners/ny.jpg" alt="New york" style="width:100%;">
+                </div>
+            </div> -->
+            <!-- Left and right controls -->
+            <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a> -->
+        </div>
+    </div>
+
+
 </section>

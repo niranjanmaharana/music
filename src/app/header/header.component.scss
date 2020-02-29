@@ -61,4 +61,48 @@
             font-size: $base-font-size;
         }
     }
+    .navigation {
+        border-bottom: 1px solid rgb(37, 37, 37);
+        border-bottom: 2px solid $theme-background;
+        background-color: $base-background;
+        padding: 0px !important;
+        // background: url(../../assets/images/top-nav.png) repeat-x;
+        .navbar-brand {
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .toggler,
+        .navbar-brand {
+            color: $white;
+            border: none;
+            margin-bottom: 5px;
+        }
+        .toggler {
+            outline: none;
+        }
+        .menu-item {
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        display: block;
+                        padding: 15px 30px;
+                        color: #fff;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: normal;
+                        transition: 0.5s ease;
+                        -o-transition: 0.5s ease;
+                        -webkit-transition: 0.5s ease;
+                    }
+                    a.active,
+                    a:hover {
+                        background-color: $theme-background;
+                    }
+                }
+            }
+        }
+    }
+    .flash-slider {
+        box-shadow: 0 10px 10px -10px $gray-box-shadow;
+    }
 }

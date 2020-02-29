@@ -13,13 +13,11 @@ body {
     font-size: $base-font-size;
     background-color: $base-background !important;
     color: $base-text-color !important;
-    background: url(assets/images/body-bg.png) repeat-x;
-    padding-top: 50px;
-    padding-bottom: 73px;
 }
 
 a {
     text-decoration: none;
+    color: $base-text-color;
 }
 
 ol,
