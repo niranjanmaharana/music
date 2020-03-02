@@ -1,0 +1,40 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+.primary-sidebar .widget {
+    border: 1px solid $widget-border-color;
+    border-top: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.primary-sidebar .widget .widget-header {
+    line-height: 37px;
+    padding: 0 15px;
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
+.primary-sidebar .nav-toggle-bars {
+    display: none;
+}
+
+.violett {
+    background: $violett;
+}
+
+@media only screen and (max-width: 992px) {
+    .primary-sidebar {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .primary-sidebar .nav-toggle-bars {
+        display: block;
+    }
+    .primary-sidebar .widget {
+        margin-bottom: 0;
+    }
+}
