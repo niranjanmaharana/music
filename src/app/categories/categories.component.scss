@@ -1,21 +1,28 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
-.primary-sidebar .widget {
-    border: 1px solid $widget-border-color;
-    border-top: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.primary-sidebar .widget .widget-header {
-    line-height: 37px;
-    padding: 0 15px;
-    color: $white;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 600;
-    margin-left: -2px;
-    margin-right: -2px;
+.primary-sidebar {
+    .widget {
+        border: 1px solid $widget-border-color;
+        border-top: 0;
+        margin-bottom: 10px;
+        font-size: 1rem !important;
+        .widget-header {
+            .navbar-toggler {
+                font-size: 1rem !important;
+            }
+            padding: 5px 0px;
+            color: $white;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: 600;
+            margin-left: -2px;
+            margin-right: -2px;
+        }
+        .category-item {
+            background-color: $white;
+            padding: 5px 5px;
+        }
+    }
 }
 
 .primary-sidebar .nav-toggle-bars {
