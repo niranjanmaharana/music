@@ -13,7 +13,7 @@
                 a {
                     font-family: 'Open Sans', sans-serif;
                     font-size: 0.75em;
-                    color: #fff;
+                    color: $white;
                     text-transform: uppercase;
                     padding: 8px 12px;
                     -webkit-transition: all 0.3s ease;
@@ -28,7 +28,7 @@
         display: inline-block;
     }
     .music-search-conainer {
-        margin: 40px 0 25px 0;
+        margin: 25px 0 25px 0;
     }
     .logo {
         float: left;
@@ -46,7 +46,7 @@
             background: url(../../assets/images/top-nav.png) repeat-x;
             background-color: $base-black;
             border-bottom: 1px solid rgb(37, 37, 37);
-            padding: 10px 20px;
+            padding: 7px 20px;
             border: none;
             color: #fff;
             border-right: 1px solid rgba(9, 8, 8, 1);
@@ -66,7 +66,10 @@
         border-bottom: 2px solid $theme-background;
         background-color: $base-background;
         padding: 0px !important;
-        // background: url(../../assets/images/top-nav.png) repeat-x;
+        background: url(../../assets/images/top-nav.png) repeat-x;
+        .navbar-toggler {
+            padding: .65rem .75rem;
+        }
         .navbar-brand {
             font-size: 18px;
             text-transform: uppercase;
@@ -101,8 +104,5 @@
                 }
             }
         }
-    }
-    .flash-slider {
-        box-shadow: 0 10px 10px -10px $gray-box-shadow;
     }
 }

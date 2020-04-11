@@ -2,17 +2,17 @@
 @import '../sass/mixins';
 .banner {
     background-color: $theme-background;
-    padding: 10px;
     font-size: 12px;
+    height: 25px;
+    position: fixed;
+    top: 0;
     width: 100%;
-    min-height: 20px;
+    z-index: 1;
+    padding-right: 10px;
     a {
-        color: $base-text-color;
-        text-decoration: none;
-        font-size: 15px;
+        color: $white;
     }
     a:hover {
-        color: $base-odd-background;
         text-decoration: none;
     }
 }
@@ -20,10 +20,11 @@
 .wrapper {
     width: 80%;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
-@media only screen and (max-width: 1366px) and (min-width: 1280px) {
-    .wrap {
+@media (max-width: 768px) {
+    .wrapper {
         width: 90%;
     }
 }

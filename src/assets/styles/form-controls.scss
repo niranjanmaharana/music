@@ -1,9 +1,8 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
-
 input:focus,
 textarea:focus,
-select:focus, 
+select:focus,
 button:focus,
 a:focus {
     outline: none;
@@ -22,7 +21,7 @@ textarea.form-control {
 }
 
 .form-contact .form-control {
-    border: 1px solid $base-text !important;
+    border: 1px solid $base-text-color !important;
     border-radius: 5px;
     height: 48px;
     padding-left: 15px;
@@ -35,4 +34,8 @@ textarea.form-control {
     height: 100% !important;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.has-error .form-control {
+    border-bottom-color: $theme-background;
 }

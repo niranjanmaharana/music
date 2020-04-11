@@ -86,6 +86,45 @@
     background-color: transparent;
 }
 
+.btn-danger {
+    background-color: $btn-danger-background !important;
+    border-color: $btn-danger-background !important;
+    box-shadow: none !important;
+    color: $white !important;
+}
+
+.btn-danger:focus,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger:hover {
+    color: $white !important;
+    background-color: $btn-danger-active-background !important;
+    border-color: $btn-danger-active-background !important;
+    box-shadow: none !important;
+}
+
+.btn-contact {
+    display: inline-block;
+    font-size: $button-font-size;
+    color: $white;
+    text-transform: capitalize;
+    -webkit-transition: .5s;
+    transition: .5s;
+    padding: 8px 43px;
+    font-weight: 400;
+    background-color: $theme-background;
+    border: 2px solid $theme-background;
+}
+
+.btn-contact:hover,
+.btn-contact:focus,
+.btn-contact:active {
+    color: $theme-background !important;
+    background-color: transparent;
+    box-shadow: none;
+}
+
 @media only screen and (max-width: 767px) and (min-width: 576px) {
     .btn-more {
         padding: 9.5px 28px;

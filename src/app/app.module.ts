@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { TooltipModule, TooltipOptions } from 'ng2-tooltip-directive';
 import { IgxCarouselModule } from 'igniteui-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +16,13 @@ import { ContentComponent } from './content/content.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AppTooltipOptions } from './const/AppTooltipOptions';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { BannerComponent } from './banner/banner.component';
+import { LyricComponent } from './lyric/lyric.component';
+import { AboutComponent } from './about/about.component';
+import { ControlMessagesComponent } from './control-messages/control-messages.component';
 
 @NgModule({
 	declarations: [
@@ -22,14 +32,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		FooterComponent,
 		SidenavComponent,
 		ContentComponent,
-		CategoriesComponent
+		CategoriesComponent,
+		ErrorComponent,
+		HomeComponent,
+		ContactComponent,
+		BannerComponent,
+		LyricComponent,
+		AboutComponent,
+		ControlMessagesComponent
 	],
 	imports: [
 		BrowserModule,
+		HttpClientModule,
 		AppRoutingModule,
 		TooltipModule.forRoot(AppTooltipOptions as TooltipOptions),
 		IgxCarouselModule,
-		BrowserAnimationsModule
+		FormsModule,
+		ReactiveFormsModule,
+		BrowserAnimationsModule,
+		ToastrModule.forRoot({
+			timeOut: 5000,
+			positionClass: 'toast-bottom-right',
+			preventDuplicates: true
+		})
 	],
 	providers: [],
 	bootstrap: [AppComponent]

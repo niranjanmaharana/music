@@ -1,5 +1,7 @@
 $base-background: #242323;
 $theme-background: #fc2c12;
+$scrollbar-background: rgba(252, 45, 18, 0.3);
+// $theme-background: #ed1c94;
 $base-text-color: #ffffff;
 $base-font-size: 13px;
 $white: #ffffff;
@@ -13,6 +15,8 @@ $menu-color: $base-black;
 $banner-text: #6ba8f9;
 $violett: #954293;
 $widget-border-color: #e9e9e9;
+$btn-danger-background: #f28281;
+$btn-danger-active-background: #eb3d3c;
 $collasped-navbar-background: rgba(1, 1, 1, 0.8);
 $btn-box-shadow: rgba(0, 0, 0, .3);
 $gray-box-shadow: rgba(0, 0, 0, 0.1);
@@ -27,3 +31,7 @@ $color-lightcoral: #F08080;
 $color-salmon: #FA8072;
 $color-darksalmon: #E9967A;
 $button-font-size: 0.8rem;
+
+/*contact form*/
+
+$contact-form-text: #a39a99;

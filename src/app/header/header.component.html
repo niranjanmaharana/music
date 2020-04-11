@@ -1,23 +1,4 @@
 <section class="header">
-    <!-- <div class="top-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 top-header-left text-left">
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Special</a></li>
-                        <li><a href="">New</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 top-header-right text-right">
-                    Right content
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="clear"> </div> -->
-
     <div class="music-search-conainer">
         <div class="container">
             <div class="row">
@@ -43,27 +24,10 @@
         </button>
         <div class="collapse navbar-collapse menu-item" [ngClass]="{'show': expandNavbar}">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <div class="flash-slider">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- <div class="item active">
-                <img src="../../assets/images/banners/la.jpg" alt="Los Angeles" style="width:100%;">
-            </div> -->
-            <div class="carousel-container">
-                <igx-carousel #carousel [loop]="true" indicatorsOrientation="top" animationType="fade">
-                    <igx-slide *ngFor="let slide of slides;">
-                        <div class="image-container">
-                            <img [src]="slide.src">
-                        </div>
-                    </igx-slide>
-                </igx-carousel>
-            </div>
-        </div>
-    </div>
 </section>

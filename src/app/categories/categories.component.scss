@@ -2,16 +2,27 @@
 @import '../../sass/mixins';
 .primary-sidebar {
     .widget {
-        border: 1px solid $widget-border-color;
-        border-top: 0;
         margin-bottom: 10px;
         font-size: 1rem !important;
-        .widget-header {
-            .navbar-toggler {
-                font-size: 1rem !important;
+        .violett {
+            background: $violett;
+        }
+        .danger {
+            background-color: $white;
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+            .menu-icon {
+                color: $base-black;
             }
+        }
+        .navbar-toggler {
+            font-size: 1rem !important;
+        }
+        .nav-toggle-bars {
+            display: none;
+        }
+        .widget-header {
+            border-bottom: 1px solid $base-black;
             padding: 5px 0px;
-            color: $white;
             text-transform: uppercase;
             cursor: pointer;
             font-weight: 600;
@@ -19,29 +30,30 @@
             margin-right: -2px;
         }
         .category-item {
-            background-color: $white;
-            padding: 5px 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 5px 5px 5px 10px;
+            transition: 1s transform height;
+            color: $white;
+            .nav-item {
+                .nav-link {
+                    font-size: 14px;
+                    color: $white;
+                    font-weight: 400;
+                }
+            }
         }
     }
-}
-
-.primary-sidebar .nav-toggle-bars {
-    display: none;
-}
-
-.violett {
-    background: $violett;
 }
 
 @media only screen and (max-width: 992px) {
     .primary-sidebar {
         padding-left: 12px;
         padding-right: 12px;
-    }
-    .primary-sidebar .nav-toggle-bars {
-        display: block;
-    }
-    .primary-sidebar .widget {
-        margin-bottom: 0;
+        .widget {
+            margin-bottom: 0;
+            .nav-toggle-bars {
+                display: block;
+            }
+        }
     }
 }

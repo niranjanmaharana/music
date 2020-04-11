@@ -1,0 +1,65 @@
+<section class="contact-section">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="address-container">
+                        <div class="container">
+                            <div class="row mb-2">
+                                <div class="col-lg-12">
+                                    <div class="title"><i class="fa fa-map-marker"></i> Address</div>
+                                    <div class="text-muted ml-2">#103, Abodh Valmark,</div>
+                                    <div class="text-muted ml-2">Veeranapalya, Nagavara</div>
+                                    <div class="text-muted ml-2">Bangalore - 560045, Karnataka</div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-lg-12">
+                                    <div class="title"><i class="fa fa-phone"></i> Lets Talk</div>
+                                    <div class="text-muted ml-2 text-success">+91-9556824846</div>
+                                    <div class="text-muted ml-2 text-success">+91-9337079036</div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-lg-12">
+                                    <div class="title"><i class="fa fa-envelope"></i> General Support</div>
+                                    <div class="ml-2"><a class="text-muted" href="mailto:admin@niranzan.in">admin@niranzan.in</a></div>
+                                    <div class="ml-2"><a class="text-muted" href="mailto:admin@musix.in">admin@musix.in</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <h4 class="title">Help us improve!</h4>
+                        <form [formGroup]="contactForm" autocomplete="off" (ngSubmit)="onSubmit()">
+                            <div class="form-group" [ngClass]="{'has-error': contactForm.controls.username.touched && contactForm.controls.username.errors && contactForm.controls.username.errors.required}">
+                                <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter Your Full Name">
+                                <control-messages [control]="contactForm.controls.username"></control-messages>
+                            </div>
+                            <div class="form-group" [ngClass]="{'has-error': contactForm.controls.email.touched && contactForm.controls.email.errors && contactForm.controls.email.errors.required}">
+                                <input type="text" class="form-control" id="email" formControlName="email" placeholder="Email ID">
+                                <control-messages [control]="contactForm.controls.email"></control-messages>
+                            </div>
+                            <div class="form-group" [ngClass]="{'has-error': contactForm.controls.mobile.touched && contactForm.controls.mobile.errors && contactForm.controls.mobile.errors.required}">
+                                <input type="text" class="form-control" id="mobile" formControlName="mobile" placeholder="Mobile Number">
+                                <control-messages [control]="contactForm.controls.mobile"></control-messages>
+                            </div>
+                            <div class="form-group" [ngClass]="{'has-error': contactForm.controls.message.touched && contactForm.controls.message.errors && contactForm.controls.message.errors.required}">
+                                <textarea type="text" class="form-control" id="message" formControlName="message" placeholder="Message"></textarea>
+                                <control-messages [control]="contactForm.controls.message"></control-messages>
+                            </div>
+                            <div class="d-inline p-2">
+                                <input type="submit" value="SUBMIT" class="ui-btn btn-contact">
+                            </div>
+                            <div class="d-inline p-2">
+                                <img src="../../assets/images/loader/loading-icon.gif" style="width: 40px;" *ngIf="formSubmitted">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

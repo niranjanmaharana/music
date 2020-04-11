@@ -15,6 +15,78 @@ body {
     font-size: $base-font-size;
     background-color: $base-background !important;
     color: $base-text-color !important;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $scrollbar-background;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $theme-background;
+    outline: 1px solid $base-color-hover;
+}
+
+html {
+    height: 100%;
+}
+
+.app-loading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .logo {
+        width: 100px;
+        height: 100px;
+        background: url(./assets/images/favicon.png) center center no-repeat;
+    }
+    .spinner {
+        height: 200px;
+        width: 200px;
+        animation: rotate 2s linear infinite;
+        transform-origin: center center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            animation: dash 1.5s ease-in-out infinite;
+            stroke-linecap: round;
+            stroke: #ddd;
+        }
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
 }
 
 a {
@@ -41,13 +113,15 @@ ul {
 img {
     max-width: 100%
 }
+
+.igx-carousel a {
+    color: $base-black !important;
+}
+
+.text-danger {
+    color: $theme-background;
+}
+
 @import "~igniteui-angular/lib/core/styles/themes/index";
-// Uncomment the following lines if you want to add a custom palette:
-// $primary: #731963 !default;
-// $secondary: #ce5712 !default;
-// $app-palette: igx-palette($primary, $secondary);
-
-/* autoprefixer grid: on */
-
 @include igx-core();
 @include igx-theme($default-palette);

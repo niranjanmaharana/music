@@ -2,20 +2,57 @@
 @import '../../sass/mixins';
 .main-section {
     padding: 20px 0px;
+    .category {
+        color: $base-black;
+        margin-bottom: 20px;
+        background: transparent;
+        .card-header {
+            background-color: $theme-background;
+            color: $white;
+            padding-top: .3rem;
+            padding-bottom: .3rem;
+        }
+    }
     .albums-container {
         .album-item {
+            cursor: pointer;
             padding: 5px;
             margin-bottom: 10px;
             align-items: center;
             max-width: 100%;
             height: 160px;
             text-align: center;
-            img {
+            color: $white;
+            .image {
                 background-position: center;
                 height: 150px;
                 max-height: 150px;
-                border: 2px solid $white;
+                border: 2px solid $base-black;
             }
+            .title {
+                font-size: 15px;
+                font-weight: normal;
+            }
+            .release-date {
+                font-size: 12px;
+                font-weight: 400;
+            }
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        }
+        .album-item:hover .image {
+            opacity: 0.3;
+        }
+        .album-item:hover .middle {
+            opacity: 1;
         }
     }
 }

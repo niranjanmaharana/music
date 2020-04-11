@@ -1,22 +1,11 @@
-<!-- <div class="primary-sidebar">
-    <div class="widget">
-        <div class="widget-header violett nav-toggle">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i>
-            <button data-toggle="collapse" data-target="#LatestSongsCategories">Categories</button>
-            <span class="nav-toggle-bars float-right"><i class="fa fa-bars"></i></span>
-            <div id="LatestSongsCategories" class="collapse">Lorem ipsum dolor text....</div>
-        </div>
-    </div>
-</div> -->
-
 <div class="primary-sidebar">
     <div class="widget">
-        <div class="widget-header violett nav-toggle">
-            <button class="navbar-toggler toggler" type="button" (click)="expndFrstCtgry = !expndFrstCtgry">
+        <div class="widget-header danger nav-toggle">
+            <button class="navbar-toggler toggler" data-toggle="collapse" type="button" (click)="expndFrstCtgry = !expndFrstCtgry">
             <span class="menu-icon"><i class="fa fa-file-text-o" aria-hidden="true"></i> Categories</span>
         </button>
         </div>
-        <div class="collapse navbar-collapse category-item" [ngClass]="{'show': expndFrstCtgry}">
+        <div class="collapse navbar-collapse category-item show" [ngClass]="{'show': expndFrstCtgry}">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">About</a></li>
