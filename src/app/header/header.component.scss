@@ -1,69 +1,47 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 .header {
-    .top-header-right,
-    .top-header-left {
-        min-height: 10px;
-        margin-top: 15px;
+    color: $white;
+    .navbar-brand {
+        color: $white;
     }
-    .top-header-left {
-        ul {
-            li {
-                display: inline-block;
-                a {
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 0.75em;
-                    color: $white;
-                    text-transform: uppercase;
-                    padding: 8px 12px;
-                    -webkit-transition: all 0.3s ease;
-                    -moz-transition: all 0.3s ease;
-                    -o-transition: all 0.3s ease;
-                    transition: all 0.3s ease;
-                }
-            }
-        }
-    }
-    .top-header-right ul li {
-        display: inline-block;
+    .banner {
+        background-color: $header-background;
+        font-size: 12px;
+        width: 100%;
+        color: $white;
     }
     .music-search-conainer {
-        margin: 25px 0 25px 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.8rem;
+        input[type="text"],
+        input[type="search"] {
+            border-radius: 0px;
+            font-size: 0.8rem;
+        }
+        button {
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 0px;
+            font-size: 0.8rem;
+        }
+        .dropdown-menu {
+            right: 0;
+        }
+        .user-icon {
+            margin-left: 10px;
+            a {
+                color: $white;
+            }
+        }
     }
     .logo {
         float: left;
         margin-top: 18px;
     }
-    .search-box {
-        text-align: left;
-        margin-top: 1.5em;
-        input[type="text"] {
-            width: 70%;
-            padding: 4px 5px 5px 5px;
-            border: 1px inset #eee;
-        }
-        input[type="submit"] {
-            background: url(../../assets/images/top-nav.png) repeat-x;
-            background-color: $base-black;
-            border-bottom: 1px solid rgb(37, 37, 37);
-            padding: 7px 20px;
-            border: none;
-            color: #fff;
-            border-right: 1px solid rgba(9, 8, 8, 1);
-            font-family: 'Open Sans', sans-serif;
-            font-weight: normal;
-            text-transform: uppercase;
-            transition: 0.5s ease;
-            -o-transition: 0.5s ease;
-            -webkit-transition: 0.5s ease;
-            cursor: pointer;
-            outline: none;
-            font-size: $base-font-size;
-        }
-    }
     .navigation {
         border-bottom: 1px solid rgb(37, 37, 37);
-        border-bottom: 2px solid $theme-background;
+        border-bottom: 2px solid $background;
         background-color: $base-background;
         padding: 0px !important;
         background: url(../../assets/images/top-nav.png) repeat-x;
@@ -99,7 +77,7 @@
                     }
                     a.active,
                     a:hover {
-                        background-color: $theme-background;
+                        background-color: $background;
                     }
                 }
             }

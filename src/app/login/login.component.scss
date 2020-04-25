@@ -1,0 +1,40 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+.login-container {
+    font-size: 0.8rem;
+    .login-content {
+        width: 30%;
+        .title {
+            color: $base-text-color;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: underline;
+            user-select: none;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .login-container {
+        .login-content {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        .login-content {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .login-container {
+        .login-content {
+            width: 90%;
+        }
+    }
+}

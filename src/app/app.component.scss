@@ -1,26 +1,10 @@
 @import '../sass/variables';
 @import '../sass/mixins';
-.banner {
-    background-color: $theme-background;
-    font-size: 12px;
-    height: 25px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    padding-right: 10px;
-    a {
-        color: $white;
-    }
-    a:hover {
-        text-decoration: none;
-    }
-}
-
 .wrapper {
     width: 80%;
     margin: 0 auto;
-    margin-top: 30px;
+    min-height: 90vh;
+    display: grid;
 }
 
 @media (max-width: 768px) {

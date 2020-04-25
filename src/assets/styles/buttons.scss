@@ -1,21 +1,40 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
-.ui-btn:hover {
+.ui-btn {
+    text-transform: uppercase;
+    padding: 10px 50px;
+    font-size: $button-font-size;
+    -webkit-transition: .5s;
+    transition: .5s;
+    font-weight: 500;
+    border-radius: 0;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.ui-btn:disabled {
+    background-color: $disabled-btn-background;
+    color: $disabled-btn-text;
+    border: $disabled-btn-border;
+}
+
+.ui-btn:disabled:hover {
+    background-color: $disabled-btn-border;
+    color: $disabled-btn-text !important;
+}
+
+.ui-btn:hover,
+.ui-btn:active,
+.ui-btn:focus {
     text-decoration: none;
+    outline: none;
 }
 
 .btn-contact {
-    border-radius: 0;
     display: inline-block;
-    padding: 13.5px 45px;
     background-color: $base-background;
-    font-size: $button-font-size;
     color: $base-color-hover;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    text-transform: capitalize;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 }
 
 .btn-contact:hover {
@@ -26,14 +45,10 @@
 
 .btn-more {
     display: inline-block;
-    padding: 12.5px 45px;
-    font-size: $button-font-size;
-    font-weight: 500;
     -webkit-transition: .5s;
     transition: .5s;
-    text-transform: capitalize;
     color: $base-color-hover;
-    border: 1px solid $base-color-hover;
+    border: 2px solid $base-color-hover;
 }
 
 .btn-more:hover {
@@ -44,7 +59,6 @@
 .learn-btn {
     display: inline-block;
     text-transform: capitalize;
-    margin-top: 20px;
     color: $base-color-hover;
 }
 
@@ -54,14 +68,10 @@
 
 .btn-submit {
     display: inline-block;
-    font-size: $button-font-size;
     color: $base-background;
-    text-transform: capitalize;
-    -webkit-transition: .5s;
-    transition: .5s;
-    padding: 14.5px 43px;
     background-color: $base-color-hover;
     border: 2px solid $base-color-hover;
+    width: 100%;
 }
 
 .btn-submit:hover {
@@ -69,14 +79,26 @@
     background-color: transparent;
 }
 
+.btn-reset {
+    color: $reset-text;
+    background-color: $reset-background;
+    border-color: $reset-border;
+    width: 100%;
+}
+
+.btn-reset:focus,
+.btn-reset.focus,
+.btn-reset:active,
+.btn-reset.active,
+.btn-reset:hover {
+    color: $reset-border;
+    background-color: transparent;
+    border-color: $reset-border;
+}
+
 .btn-download {
     display: inline-block;
-    font-size: $button-font-size;
     color: $white;
-    text-transform: capitalize;
-    -webkit-transition: .5s;
-    transition: .5s;
-    padding: 14.5px 43px;
     background-color: $banner-text;
     border: 2px solid $banner-text;
 }
@@ -106,21 +128,15 @@
 
 .btn-contact {
     display: inline-block;
-    font-size: $button-font-size;
     color: $white;
-    text-transform: capitalize;
-    -webkit-transition: .5s;
-    transition: .5s;
-    padding: 8px 43px;
-    font-weight: 400;
-    background-color: $theme-background;
-    border: 2px solid $theme-background;
+    background-color: $background;
+    border: 2px solid $background;
 }
 
 .btn-contact:hover,
 .btn-contact:focus,
 .btn-contact:active {
-    color: $theme-background !important;
+    color: $background !important;
     background-color: transparent;
     box-shadow: none;
 }

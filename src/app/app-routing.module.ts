@@ -5,14 +5,17 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
 import { LyricComponent } from './lyric/lyric.component';
-
+import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'lyric/:id', component: LyricComponent },
+  { path: 'login', component: LoginComponent },
+  // { path: 'lyric/:id', component: LyricComponent, canActivate: [AuthGuard]},
+  { path: 'lyric', component: LyricComponent, canActivate: [AuthGuard]},
   { path: '**', component: ErrorComponent }
 ];
 

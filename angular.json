@@ -31,12 +31,15 @@
                             "src/styles.scss",
                             "src/assets/styles/buttons.scss",
                             "src/assets/styles/form-controls.scss",
+                            "src/sass/_variables.scss",
+                            "src/sass/_mixins.scss",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/font-awesome/css/font-awesome.min.css",
                             "node_modules/ngx-toastr/toastr.css"
                         ],
                         "scripts": [
-                            "node_modules/jquery/dist/jquery.js"
+                            "node_modules/jquery/dist/jquery.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
                         ]
                     },
                     "configurations": {

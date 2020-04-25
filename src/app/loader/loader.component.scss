@@ -1,0 +1,57 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+.loadWrapper {
+    background: $loader-background;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    .loader {
+        margin: 0px auto;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 40%;
+        .text {
+            color: $loader-text;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .bounceball {
+            position: relative;
+            display: inline-block;
+            height: 37px;
+            width: $bouncer-width;
+            &:before {
+                position: absolute;
+                content: '';
+                display: block;
+                top: 0;
+                width: $bouncer-width;
+                height: $bouncer-height;
+                border-radius: 50%;
+                background-color: $loader-bouncer;
+                transform-origin: 50%;
+                animation: bounce 500ms alternate infinite ease;
+            }
+        }
+        @keyframes bounce {
+            0% {
+                top: $bounce_height;
+                height: 5px;
+                border-radius: 60px 60px 20px 20px;
+                transform: scaleX(2);
+            }
+            35% {
+                height: $bouncer-height;
+                border-radius: 50%;
+                transform: scaleX(1);
+            }
+            100% {
+                top: 0;
+            }
+        }
+    }
+}

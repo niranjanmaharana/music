@@ -1,15 +1,14 @@
-$base-background: #242323;
-$theme-background: #fc2c12;
-$scrollbar-background: rgba(252, 45, 18, 0.3);
-// $theme-background: #ed1c94;
-$base-text-color: #ffffff;
-$base-font-size: 13px;
+$base-background: #ffffff;
+$background: #1976d2;
+$header-background: #378fe7;
+$footer-background: #378fe7;
+$scrollbar-background: rgba(0, 0, 0, 0.9);
+$base-text-color: #000000;
 $white: #ffffff;
 $base-black: #000000;
 $base-icon: $white;
 $base-color-hover: #ea5267;
 $base-odd-background: #e1e1e4;
-$footer-background: #29272a;
 $footer-text-color: #63615f;
 $menu-color: $base-black;
 $banner-text: #6ba8f9;
@@ -31,7 +30,28 @@ $color-lightcoral: #F08080;
 $color-salmon: #FA8072;
 $color-darksalmon: #E9967A;
 $button-font-size: 0.8rem;
+$base-font-size: 13px;
 
 /*contact form*/
 
 $contact-form-text: #a39a99;
+
+/*reset button colors*/
+
+$reset-text: #333;
+$reset-background: #e6e6e6;
+$reset-border: #adadad;
+$disabled-btn-text: #FFFFFF;
+$disabled-btn-background: #adadad;
+$disabled-btn-border: #969494;
+
+/*
+Loader css variables
+*/
+
+$loader-background: rgba(0, 0, 0, 0.9);
+$loader-bouncer: #eb3d3c;
+$loader-text: #eb3d3c;
+$bouncer-width: 15px;
+$bouncer-height: 15px;
+$bounce_height: 30px;

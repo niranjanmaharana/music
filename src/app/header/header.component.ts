@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Configuration } from '../util/config';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  showModal: boolean;
+  firstNm: string;
+  constructor() {
+    this.firstNm = Configuration.getFirstName();
+  }
 
   ngOnInit() {
   }
 
+  show() {
+    this.showModal = true;
+  }
+
+  hide() {
+    this.showModal = false;
+  }
 }

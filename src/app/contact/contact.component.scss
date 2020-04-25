@@ -24,7 +24,7 @@
                 font-weight: 300;
                 color: $white;
                 i {
-                    color: $theme-background;
+                    color: $background;
                 }
             }
         }
@@ -56,7 +56,7 @@
                 height: 100px;
             }
             .has-error .form-control {
-                border-bottom-color: $theme-background;
+                border-bottom-color: $background;
             }
         }
     }

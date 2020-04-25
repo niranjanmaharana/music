@@ -1,7 +1,8 @@
 // CSS Reset, comment out if not required or using a different module
-@import '~minireset.css/minireset';
 @import './sass/variables';
 @import './sass/mixins';
+@import '../src/assets/styles/form-controls.scss';
+@import '../src/assets/styles/buttons.scss';
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -11,7 +12,7 @@
 body {
     font-family: 'Open Sans' !important;
     padding: 0;
-    margin: 0;
+    margin: 0px;
     font-size: $base-font-size;
     background-color: $base-background !important;
     color: $base-text-color !important;
@@ -19,7 +20,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 3px;
+    width: 6px;
 }
 
 body::-webkit-scrollbar-track {
@@ -27,8 +28,32 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: $theme-background;
+    background-color: $background;
     outline: 1px solid $base-color-hover;
+}
+
+button,
+input {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:focus {
+    outline: none !important;
+}
+
+button:focus,
+input:focus,
+button:active,
+input:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 html {
@@ -114,14 +139,18 @@ img {
     max-width: 100%
 }
 
-.igx-carousel a {
-    color: $base-black !important;
-}
-
 .text-danger {
-    color: $theme-background;
+    color: $background;
 }
 
-@import "~igniteui-angular/lib/core/styles/themes/index";
-@include igx-core();
-@include igx-theme($default-palette);
+@media only screen and (max-width: 767px) {
+    body {
+        margin-top: 90px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+}

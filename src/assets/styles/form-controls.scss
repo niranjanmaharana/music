@@ -8,6 +8,11 @@ a:focus {
     outline: none;
 }
 
+ipnut,
+button {
+    border: 0px;
+}
+
 textarea.form-control {
     resize: none;
 }
@@ -37,5 +42,5 @@ textarea.form-control {
 }
 
 .has-error .form-control {
-    border-bottom-color: $theme-background;
+    border-bottom-color: $background;
 }
