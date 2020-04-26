@@ -4,6 +4,8 @@ import { TooltipModule, TooltipOptions } from 'ng2-tooltip-directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { MomentModule } from 'angular2-moment';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +28,8 @@ import { LoginComponent } from './login/login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LoaderComponent } from './loader/loader.component';
+import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
+import { PropertiesComponent } from './properties/properties.component';
 
 @NgModule({
 	declarations: [
@@ -46,10 +50,14 @@ import { LoaderComponent } from './loader/loader.component';
 		LoginComponent,
 		AdminHomeComponent,
 		ResetPasswordComponent,
-		LoaderComponent
+		LoaderComponent,
+		PropertiesComponent
 	],
 	exports: [LoaderComponent],
 	imports: [
+		NgIdleKeepaliveModule.forRoot(),
+		MomentModule,
+		NgxPaginationModule,
 		BrowserModule,
 		HttpClientModule,
 		AppRoutingModule,
@@ -67,5 +75,5 @@ import { LoaderComponent } from './loader/loader.component';
 	bootstrap: [AppComponent]
 })
 export class AppModule {
-	
+
 }

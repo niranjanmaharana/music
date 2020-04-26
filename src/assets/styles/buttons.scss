@@ -81,7 +81,7 @@
 
 .btn-reset {
     color: $reset-text;
-    background-color: $reset-background;
+    background-color: transparent;
     border-color: $reset-border;
     width: 100%;
 }
@@ -92,7 +92,7 @@
 .btn-reset.active,
 .btn-reset:hover {
     color: $reset-border;
-    background-color: transparent;
+    background-color: $reset-background;
     border-color: $reset-border;
 }
 

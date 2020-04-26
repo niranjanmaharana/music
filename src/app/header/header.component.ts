@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Configuration } from '../util/config';
+import { AuthenticationService } from '../services/authentication.service';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +11,11 @@ import { Configuration } from '../util/config';
 export class HeaderComponent implements OnInit {
   showModal: boolean;
   firstNm: string;
-  constructor() {
-    this.firstNm = Configuration.getFirstName();
-  }
+  user: User = null;
+  loggedIn: boolean = false;
+  constructor(private authService: AuthenticationService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   show() {
     this.showModal = true;

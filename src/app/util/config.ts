@@ -5,7 +5,7 @@ import { JwtResponse } from '../model/jwt.response';
 
 export class Configuration {
     static user: User = null;
-
+    
     static clearToken() {
         sessionStorage.removeItem('token');
         this.user = null;

@@ -1,15 +1,14 @@
 $base-background: #ffffff;
 $background: #1976d2;
 $header-background: #378fe7;
-$footer-background: #378fe7;
 $scrollbar-background: rgba(0, 0, 0, 0.9);
 $base-text-color: #000000;
 $white: #ffffff;
+$black: #000000;
 $base-black: #000000;
 $base-icon: $white;
 $base-color-hover: #ea5267;
 $base-odd-background: #e1e1e4;
-$footer-text-color: #63615f;
 $menu-color: $base-black;
 $banner-text: #6ba8f9;
 $violett: #954293;
@@ -31,6 +30,13 @@ $color-salmon: #FA8072;
 $color-darksalmon: #E9967A;
 $button-font-size: 0.8rem;
 $base-font-size: 13px;
+
+/*
+Footer css variables
+*/
+
+$footer-background: #378fe7;
+$footer-text-color: #63615f;
 
 /*contact form*/
 
@@ -55,3 +61,12 @@ $loader-text: #eb3d3c;
 $bouncer-width: 15px;
 $bouncer-height: 15px;
 $bounce_height: 30px;
+
+/*
+Modal css variables
+*/
+
+$modal-background: $white;
+$modal-text: #000000;
+$modal-header-background: #378fe7;
+$modal-header-text: $white;

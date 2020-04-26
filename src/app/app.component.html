@@ -1,7 +1,33 @@
+<div [style.display]="this.authService.showWarning ? 'block' : 'none'" class="modal" data-backdrop="false" role="dialog" aria-labelledby="logoutwarning" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title pull-left">Session Warning</span>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="this.authService.showWarning = false">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{this.authService.idleState}}
+            </div>
+            <div class="modal-footer">
+                <div class="container">
+                    <div class="row mrgbtm text-right">
+                        <div class="col-md-6">
+                            <button type="button" (click)="onLogoutSessionClick()" class="btn btn-danger">Logout</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" (click)="onContinueSessionClick()" class="btn btn-warning">Continue Working</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <app-loader></app-loader>
 <app-header></app-header>
-<div class=" wrapper ">
-    <!-- <app-banner></app-banner> -->
+<div class="wrapper">
     <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

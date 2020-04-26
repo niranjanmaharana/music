@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
 import { first } from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
@@ -25,8 +25,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authenticationService: AuthenticationService,
     private toaster: ToastrService
-  ) {
-  }
+  ) { }
 
   show() {
     this.showModal = true;
@@ -58,13 +57,14 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.loading = false;
+          this.authenticationService.start();
           this.router.navigate(['/home']);
         },
         error => {
           this.error = ErrorResponseHandler.getResponseMessage(error.status, error.statusText);
           this.toaster.error(this.error, 'Error');
-          this.loading = false;
+          this.authenticationService.stop();
         });
+    this.loading = false;
   }
 }

@@ -143,6 +143,32 @@ img {
     color: $background;
 }
 
+.modal {
+    -webkit-backdrop-filter: opacity(0.4);
+    backdrop-filter: opacity(0.4);
+    .modal-header {
+        background: $modal-header-background;
+        color: $modal-header-text;
+        font-size: 18px;
+        padding: 0.5rem 1rem;
+        .modal-title {
+            pointer-events: none;
+        }
+    }
+    .modal-body {
+        padding: 1.5rem 1rem;
+    }
+}
+
+.section-content {
+    padding-bottom: 5%;
+}
+
+.pagination {
+    max-height: 70vh;
+    overflow: auto;
+}
+
 @media only screen and (max-width: 767px) {
     body {
         margin-top: 90px;
